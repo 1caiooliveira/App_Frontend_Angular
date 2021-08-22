@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="form-group">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped table-hover" datatable [dtOptions]="dtOptions"
+                [dtTrigger]="dtTrigger">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Usuário</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Site</th>
+                        <th>Empresa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of allUsers">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.phone }}</td>
+                        <td>{{ user.website }}</td>
+                        <td>{{ user.company.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
